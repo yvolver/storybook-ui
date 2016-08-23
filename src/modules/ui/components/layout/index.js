@@ -62,7 +62,7 @@ const onDragEnd = function () {
 class Layout extends React.Component {
   renderWithFullscreen() {
     return (
-      <div style={fullScreenStyle}>
+      <div className="preview-full" style={fullScreenStyle}>
         {this.props.preview()}
       </div>
     );
@@ -85,7 +85,7 @@ class Layout extends React.Component {
           onDragStarted={onDragStart}
           onDragFinished={onDragEnd}
         >
-          <div style={leftPanelStyle}>
+          <div className="left-panel" style={leftPanelStyle}>
             {props.showLeftPanel ? props.leftPanel() : null}
           </div>
 
@@ -98,12 +98,12 @@ class Layout extends React.Component {
             onDragStarted={onDragStart}
             onDragFinished={onDragEnd}
           >
-            <div style={contentPanelStyle}>
-              <div style={previewStyle}>
+            <div className="content-panel" style={contentPanelStyle}>
+              <div className="preview" style={previewStyle}>
                 {props.preview()}
               </div>
             </div>
-            <div style={downPanelStyle}>
+            <div className="down-panel" style={downPanelStyle}>
               {props.showDownPanel ? props.downPanel() : null}
             </div>
           </SplitPane>

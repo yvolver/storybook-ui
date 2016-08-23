@@ -110,7 +110,7 @@ var Layout = function (_React$Component) {
     value: function renderWithFullscreen() {
       return _react2.default.createElement(
         'div',
-        { style: fullScreenStyle },
+        { className: 'preview-full', style: fullScreenStyle },
         this.props.preview()
       );
     }
@@ -138,7 +138,7 @@ var Layout = function (_React$Component) {
           },
           _react2.default.createElement(
             'div',
-            { style: leftPanelStyle },
+            { className: 'left-panel', style: leftPanelStyle },
             props.showLeftPanel ? props.leftPanel() : null
           ),
           _react2.default.createElement(
@@ -154,16 +154,16 @@ var Layout = function (_React$Component) {
             },
             _react2.default.createElement(
               'div',
-              { style: contentPanelStyle },
+              { className: 'content-panel', style: contentPanelStyle },
               _react2.default.createElement(
                 'div',
-                { style: previewStyle },
+                { className: 'preview', style: previewStyle },
                 props.preview()
               )
             ),
             _react2.default.createElement(
               'div',
-              { style: downPanelStyle },
+              { className: 'down-panel', style: downPanelStyle },
               props.showDownPanel ? props.downPanel() : null
             )
           )
