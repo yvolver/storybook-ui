@@ -49,7 +49,7 @@ class Stories extends React.Component {
     }
 
     return (
-      <div {...props}>
+      <div className="sb-story-container" {...props}>
         {story}
       </div>
     );
@@ -64,12 +64,13 @@ class Stories extends React.Component {
       return (
         <div key={kind}>
           <div
+            className="sb-story--selected"
             style={style}
             onClick={this.fireOnKind.bind(this, kind)}
           >
             {kind}
           </div>
-          <div>
+          <div className="sb-story-render">
             {stories.map(this.renderStory)}
           </div>
         </div>
@@ -81,6 +82,7 @@ class Stories extends React.Component {
         key={kind}
         style={style}
         onClick={this.fireOnKind.bind(this, kind, null)}
+        className="sb-story--not-selected"
       >
         {kind}
       </div>
@@ -90,7 +92,7 @@ class Stories extends React.Component {
   render() {
     const { stories } = this.props;
     return (
-      <div style={listStyle}>
+      <div className="sb-stories-list" style={listStyle}>
         {stories.map(this.renderKind)}
       </div>
     );

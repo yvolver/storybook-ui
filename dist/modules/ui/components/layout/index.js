@@ -110,7 +110,7 @@ var Layout = function (_React$Component) {
     value: function renderWithFullscreen() {
       return _react2.default.createElement(
         'div',
-        { className: 'preview-full', style: fullScreenStyle },
+        { className: 'sb-preview-full', style: fullScreenStyle },
         this.props.preview()
       );
     }
@@ -125,7 +125,7 @@ var Layout = function (_React$Component) {
       }
       return _react2.default.createElement(
         'div',
-        { style: rootStyle },
+        { className: 'sb-root', style: rootStyle },
         _react2.default.createElement(
           _reactSplitPane2.default,
           {
@@ -138,7 +138,7 @@ var Layout = function (_React$Component) {
           },
           _react2.default.createElement(
             'div',
-            { className: 'left-panel', style: leftPanelStyle },
+            { className: 'sb-left-panel', style: leftPanelStyle },
             props.showLeftPanel ? props.leftPanel() : null
           ),
           _react2.default.createElement(
@@ -154,16 +154,16 @@ var Layout = function (_React$Component) {
             },
             _react2.default.createElement(
               'div',
-              { className: 'content-panel', style: contentPanelStyle },
+              { className: 'sb-content-panel', style: contentPanelStyle },
               _react2.default.createElement(
                 'div',
-                { className: 'preview', style: previewStyle },
+                { className: 'sb-preview', style: previewStyle },
                 props.preview()
               )
             ),
             _react2.default.createElement(
               'div',
-              { className: 'down-panel', style: downPanelStyle },
+              { className: 'sb-down-panel', style: downPanelStyle },
               props.showDownPanel ? props.downPanel() : null
             )
           )

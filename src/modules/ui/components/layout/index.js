@@ -62,7 +62,7 @@ const onDragEnd = function () {
 class Layout extends React.Component {
   renderWithFullscreen() {
     return (
-      <div className="preview-full" style={fullScreenStyle}>
+      <div className="sb-preview-full" style={fullScreenStyle}>
         {this.props.preview()}
       </div>
     );
@@ -76,7 +76,7 @@ class Layout extends React.Component {
       downPanelDefaultSize = props.downPanelInRight ? 400 : 200;
     }
     return (
-      <div style={rootStyle}>
+      <div className="sb-root" style={rootStyle}>
         <SplitPane
           split="vertical"
           minSize={leftPanelDefaultSize}
@@ -85,7 +85,7 @@ class Layout extends React.Component {
           onDragStarted={onDragStart}
           onDragFinished={onDragEnd}
         >
-          <div className="left-panel" style={leftPanelStyle}>
+          <div className="sb-left-panel" style={leftPanelStyle}>
             {props.showLeftPanel ? props.leftPanel() : null}
           </div>
 
@@ -98,12 +98,12 @@ class Layout extends React.Component {
             onDragStarted={onDragStart}
             onDragFinished={onDragEnd}
           >
-            <div className="content-panel" style={contentPanelStyle}>
-              <div className="preview" style={previewStyle}>
+            <div className="sb-content-panel" style={contentPanelStyle}>
+              <div className="sb-preview" style={previewStyle}>
                 {props.preview()}
               </div>
             </div>
-            <div className="down-panel" style={downPanelStyle}>
+            <div className="sb-down-panel" style={downPanelStyle}>
               {props.showDownPanel ? props.downPanel() : null}
             </div>
           </SplitPane>

@@ -70,7 +70,7 @@ var Header = function Header(_ref) {
     { style: wrapperStyle },
     _react2.default.createElement(
       'button',
-      { style: shortcutIconStyle, onClick: openShortcutsHelp },
+      { className: 'sb-shortcuts', style: shortcutIconStyle, onClick: openShortcutsHelp },
       '⌘'
     ),
     _react2.default.createElement(
@@ -78,7 +78,7 @@ var Header = function Header(_ref) {
       { style: linkStyle, href: url, target: '_blank' },
       _react2.default.createElement(
         'h3',
-        { style: headingStyle },
+        { className: 'sb-header', style: headingStyle },
         name
       )
     )

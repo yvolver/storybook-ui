@@ -58,7 +58,7 @@ var LeftPanel = function LeftPanel(props) {
     }),
     _react2.default.createElement(
       'div',
-      { style: scrollStyle },
+      { className: 'sb-stories', style: scrollStyle },
       props.stories ? _react2.default.createElement(_stories2.default, (0, _lodash2.default)(props, storyProps)) : null
     )
   );

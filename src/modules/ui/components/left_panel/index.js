@@ -28,7 +28,7 @@ const LeftPanel = (props) => (
       onClear={() => props.onStoryFilter('')}
       onChange={(text) => props.onStoryFilter(text)}
     />
-    <div style={scrollStyle}>
+    <div className="sb-stories" style={scrollStyle}>
       {props.stories ? (<Stories {...pick(props, storyProps)} />) : null}
     </div>
   </div>

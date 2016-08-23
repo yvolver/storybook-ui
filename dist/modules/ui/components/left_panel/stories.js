@@ -104,7 +104,7 @@ var Stories = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        props,
+        (0, _extends3.default)({ className: 'sb-story-container' }, props),
         story
       );
     }
@@ -125,6 +125,7 @@ var Stories = function (_React$Component) {
           _react2.default.createElement(
             'div',
             {
+              className: 'sb-story--selected',
               style: style,
               onClick: this.fireOnKind.bind(this, kind)
             },
@@ -132,7 +133,7 @@ var Stories = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
-            null,
+            { className: 'sb-story-render' },
             stories.map(this.renderStory)
           )
         );
@@ -143,7 +144,8 @@ var Stories = function (_React$Component) {
         {
           key: kind,
           style: style,
-          onClick: this.fireOnKind.bind(this, kind, null)
+          onClick: this.fireOnKind.bind(this, kind, null),
+          className: 'sb-story--not-selected'
         },
         kind
       );
@@ -155,7 +157,7 @@ var Stories = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { style: listStyle },
+        { className: 'sb-stories-list', style: listStyle },
         stories.map(this.renderKind)
       );
     }

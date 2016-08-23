@@ -49,9 +49,11 @@ const linkStyle = {
 
 const Header = ({ openShortcutsHelp, name, url }) => (
   <div style={wrapperStyle}>
-    <button style={shortcutIconStyle} onClick={openShortcutsHelp}>⌘</button>
+    <button className="sb-shortcuts" style={shortcutIconStyle} onClick={openShortcutsHelp}>
+      ⌘
+    </button>
     <a style={linkStyle} href={url} target="_blank">
-      <h3 style={headingStyle}>{name}</h3>
+      <h3 className="sb-header" style={headingStyle}>{name}</h3>
     </a>
   </div>
 );

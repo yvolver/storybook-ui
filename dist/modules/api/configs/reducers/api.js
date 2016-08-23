@@ -130,7 +130,7 @@ function jumpToStory(storyKinds, selectedKind, selectedStory, direction) {
 var defaultState = {
   actions: [],
   options: {
-    name: 'REACT CRAPPYBOOK',
+    name: 'REACT STORYBOOK',
     url: 'https://github.com/kadirahq/react-storybook'
   }
 };

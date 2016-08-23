@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _defineProperty2 = require('babel-runtime/helpers/defineProperty');
+
+var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -112,11 +116,12 @@ var TextFilter = function (_React$Component) {
 
       return _react2.default.createElement(
         'div',
-        { style: mainStyle },
+        { className: 'sb-filter-wrapper', style: mainStyle },
         _react2.default.createElement(
           'div',
-          { style: textWrapStyle },
+          { className: 'sb-filter-container', style: textWrapStyle },
           _react2.default.createElement('input', {
+            className: 'sb-filter-input',
             style: textStyle,
             type: 'text',
             placeholder: 'Filter',
@@ -127,11 +132,11 @@ var TextFilter = function (_React$Component) {
         ),
         this.state.query && this.state.query.length && _react2.default.createElement(
           'div',
-          {
+          (0, _defineProperty3.default)({
+            className: 'sb-filter-clear',
             style: clearButtonStyle,
-            onClick: this.fireOnClear,
-            className: 'clear'
-          },
+            onClick: this.fireOnClear
+          }, 'className', 'clear'),
           '×'
         )
       );
