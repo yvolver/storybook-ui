@@ -3,9 +3,10 @@ import { baseFonts } from '../theme';
 
 const mainStyle = {
   ...baseFonts,
-  border: '1px solid #ECECEC',
+  border: '1px solid #677686',
   borderRadius: 2,
   position: 'relative',
+  margin: '0 10px',
 };
 
 export default class TextFilter extends React.Component {
@@ -40,15 +41,16 @@ export default class TextFilter extends React.Component {
     };
 
     const textStyle = {
+      background: '#363f49',
       fontSize: 12,
-      color: '#828282',
+      color: '#fff',
       padding: 5,
       display: 'block',
       width: '100%',
       boxSizing: 'border-box',
       outline: 'none',
-      border: 0,
       height: 26,
+      border: '1px solid #40464e',
     };
 
     const clearButtonStyle = {

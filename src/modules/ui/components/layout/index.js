@@ -6,7 +6,7 @@ import SplitPane from '@kadira/react-split-pane';
 
 const rootStyle = {
   height: '100vh',
-  backgroundColor: '#F7F7F7',
+  backgroundColor: '#363f49',
 };
 
 const fullScreenStyle = {

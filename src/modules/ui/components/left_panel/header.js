@@ -2,18 +2,18 @@ import React from 'react';
 import { baseFonts } from '../theme';
 
 const wrapperStyle = {
-  background: '#F7F7F7',
-  marginBottom: 10,
+  margin: '0 10px 10px',
 };
 
 const headingStyle = {
   ...baseFonts,
+  background: '#40464e',
   textTransform: 'uppercase',
   letterSpacing: '1.5px',
   fontSize: '12px',
-  fontWeight: 'bolder',
-  color: '#828282',
-  border: '1px solid #C1C1C1',
+  fontWeight: 'normal',
+  color: '#fff',
+  border: '1px solid #40464e',
   textAlign: 'center',
   borderRadius: '2px',
   padding: '5px',
@@ -25,11 +25,12 @@ const headingStyle = {
 
 const shortcutIconStyle = {
   textTransform: 'uppercase',
+  background: '#40464e',
   letterSpacing: '3.5px',
   fontSize: 12,
-  fontWeight: 'bolder',
-  color: 'rgb(130, 130, 130)',
-  border: '1px solid rgb(193, 193, 193)',
+  fontWeight: 'normal',
+  color: '#fff',
+  border: '1px solid #40464e',
   textAlign: 'center',
   borderRadius: 2,
   padding: 5,
@@ -39,7 +40,6 @@ const shortcutIconStyle = {
   paddingLeft: 8,
   float: 'right',
   marginLeft: 5,
-  backgroundColor: 'inherit',
   outline: 0,
 };
 

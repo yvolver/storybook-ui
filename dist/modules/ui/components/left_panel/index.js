@@ -33,7 +33,8 @@ var scrollStyle = {
 };
 
 var mainStyle = {
-  padding: 20
+  background: '#222932',
+  padding: '20px 0'
 };
 
 var storyProps = ['stories', 'selectedKind', 'selectedStory', 'onSelectStory'];

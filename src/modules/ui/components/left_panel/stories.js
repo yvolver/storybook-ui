@@ -3,19 +3,40 @@ import { baseFonts } from '../theme';
 
 const listStyle = {
   ...baseFonts,
+  marginTop: '20px',
 };
 
 const kindStyle = {
-  fontSize: 15,
-  padding: '10px 0px',
+  borderBottom: '1px solid #3a4048',
+  color: '#e0e0e0',
   cursor: 'pointer',
-  borderBottom: '1px solid #EEE',
+  fontSize: 15,
+  padding: '10px 15px',
 };
 
-const storyStyle = {
-  fontSize: 13,
-  padding: '8px 0px 8px 10px',
+const styleSelected = {
+  background: '#2a323d',
+  color: '#fff',
   cursor: 'pointer',
+  fontSize: 15,
+  fontWeight: 'bold',
+  padding: '10px 15px',
+};
+
+const styleStoryState = {
+  background: '#2a323d',
+  color: '#e0e0e0',
+  cursor: 'pointer',
+  fontSize: 13,
+  fontWeight: 'normal',
+  margin: '5px 10px',
+  padding: '10px 0 10px 10px',
+};
+
+const styleStoryStateSelected = {
+  ...styleStoryState,
+  color: '#46e48d',
+  margin: '5px 0 5px 10px',
 };
 
 class Stories extends React.Component {
@@ -37,19 +58,18 @@ class Stories extends React.Component {
 
   renderStory(story) {
     const { selectedStory } = this.props;
-    const style = { ...storyStyle };
+    let style = styleStoryState;
     const props = {
       key: story,
-      style,
       onClick: this.fireOnStory.bind(this, story),
     };
 
     if (story === selectedStory) {
-      style.fontWeight = 'bold';
+      style = styleStoryStateSelected;
     }
 
     return (
-      <div className="sb-story-container" {...props}>
+      <div style={style} className="sb-story-container" {...props}>
         {story}
       </div>
     );
@@ -60,12 +80,11 @@ class Stories extends React.Component {
     const style = { ...kindStyle };
 
     if (kind === selectedKind) {
-      style.fontWeight = 'bold';
       return (
         <div key={kind}>
           <div
             className="sb-story--selected"
-            style={style}
+            style={styleSelected}
             onClick={this.fireOnKind.bind(this, kind)}
           >
             {kind}

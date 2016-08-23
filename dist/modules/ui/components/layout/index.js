@@ -44,7 +44,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var rootStyle = {
   height: '100vh',
-  backgroundColor: '#F7F7F7'
+  backgroundColor: '#363f49'
 };
 
 var fullScreenStyle = {

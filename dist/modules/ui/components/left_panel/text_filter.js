@@ -41,9 +41,10 @@ var _theme = require('../theme');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mainStyle = (0, _extends3.default)({}, _theme.baseFonts, {
-  border: '1px solid #ECECEC',
+  border: '1px solid #677686',
   borderRadius: 2,
-  position: 'relative'
+  position: 'relative',
+  margin: '0 10px'
 });
 
 var TextFilter = function (_React$Component) {
@@ -89,15 +90,16 @@ var TextFilter = function (_React$Component) {
       };
 
       var textStyle = {
+        background: '#363f49',
         fontSize: 12,
-        color: '#828282',
+        color: '#fff',
         padding: 5,
         display: 'block',
         width: '100%',
         boxSizing: 'border-box',
         outline: 'none',
-        border: 0,
-        height: 26
+        height: 26,
+        border: '1px solid #40464e'
       };
 
       var clearButtonStyle = {

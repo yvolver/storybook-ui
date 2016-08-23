@@ -36,20 +36,41 @@ var _theme = require('../theme');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var listStyle = (0, _extends3.default)({}, _theme.baseFonts);
+var listStyle = (0, _extends3.default)({}, _theme.baseFonts, {
+  marginTop: '20px'
+});
 
 var kindStyle = {
-  fontSize: 15,
-  padding: '10px 0px',
+  borderBottom: '1px solid #3a4048',
+  color: '#e0e0e0',
   cursor: 'pointer',
-  borderBottom: '1px solid #EEE'
+  fontSize: 15,
+  padding: '10px 15px'
 };
 
-var storyStyle = {
-  fontSize: 13,
-  padding: '8px 0px 8px 10px',
-  cursor: 'pointer'
+var styleSelected = {
+  background: '#2a323d',
+  color: '#fff',
+  cursor: 'pointer',
+  fontSize: 15,
+  fontWeight: 'bold',
+  padding: '10px 15px'
 };
+
+var styleStoryState = {
+  background: '#2a323d',
+  color: '#e0e0e0',
+  cursor: 'pointer',
+  fontSize: 13,
+  fontWeight: 'normal',
+  margin: '5px 10px',
+  padding: '10px 0 10px 10px'
+};
+
+var styleStoryStateSelected = (0, _extends3.default)({}, styleStoryState, {
+  color: '#46e48d',
+  margin: '5px 0 5px 10px'
+});
 
 var Stories = function (_React$Component) {
   (0, _inherits3.default)(Stories, _React$Component);
@@ -91,20 +112,19 @@ var Stories = function (_React$Component) {
     value: function renderStory(story) {
       var selectedStory = this.props.selectedStory;
 
-      var style = (0, _extends3.default)({}, storyStyle);
+      var style = styleStoryState;
       var props = {
         key: story,
-        style: style,
         onClick: this.fireOnStory.bind(this, story)
       };
 
       if (story === selectedStory) {
-        style.fontWeight = 'bold';
+        style = styleStoryStateSelected;
       }
 
       return _react2.default.createElement(
         'div',
-        (0, _extends3.default)({ className: 'sb-story-container' }, props),
+        (0, _extends3.default)({ style: style, className: 'sb-story-container' }, props),
         story
       );
     }
@@ -118,7 +138,6 @@ var Stories = function (_React$Component) {
       var style = (0, _extends3.default)({}, kindStyle);
 
       if (kind === selectedKind) {
-        style.fontWeight = 'bold';
         return _react2.default.createElement(
           'div',
           { key: kind },
@@ -126,7 +145,7 @@ var Stories = function (_React$Component) {
             'div',
             {
               className: 'sb-story--selected',
-              style: style,
+              style: styleSelected,
               onClick: this.fireOnKind.bind(this, kind)
             },
             kind
