@@ -7,7 +7,7 @@ const listStyle = {
 };
 
 const kindStyle = {
-  borderBottom: '1px solid #3a4048',
+  borderTop: '1px solid #3a4048',
   color: '#e0e0e0',
   cursor: 'pointer',
   fontSize: 15,
@@ -15,7 +15,7 @@ const kindStyle = {
 };
 
 const styleSelected = {
-  background: '#2a323d',
+  background: '#363f49',
   color: '#fff',
   cursor: 'pointer',
   fontSize: 15,
@@ -24,19 +24,21 @@ const styleSelected = {
 };
 
 const styleStoryState = {
-  background: '#2a323d',
+  // background: '#2a323d',
+  borderLeft: '3px solid #363f49',
   color: '#e0e0e0',
   cursor: 'pointer',
   fontSize: 13,
   fontWeight: 'normal',
-  margin: '5px 10px',
-  padding: '10px 0 10px 10px',
+  margin: '0 10px',
+  padding: '10px 0 10px 15px',
 };
 
 const styleStoryStateSelected = {
   ...styleStoryState,
+  borderLeft: '3px solid #46e48d',
   color: '#46e48d',
-  margin: '5px 0 5px 10px',
+  margin: '0 0 0 10px',
 };
 
 class Stories extends React.Component {

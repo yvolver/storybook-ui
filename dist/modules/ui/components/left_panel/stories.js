@@ -41,7 +41,7 @@ var listStyle = (0, _extends3.default)({}, _theme.baseFonts, {
 });
 
 var kindStyle = {
-  borderBottom: '1px solid #3a4048',
+  borderTop: '1px solid #3a4048',
   color: '#e0e0e0',
   cursor: 'pointer',
   fontSize: 15,
@@ -49,7 +49,7 @@ var kindStyle = {
 };
 
 var styleSelected = {
-  background: '#2a323d',
+  background: '#363f49',
   color: '#fff',
   cursor: 'pointer',
   fontSize: 15,
@@ -58,18 +58,20 @@ var styleSelected = {
 };
 
 var styleStoryState = {
-  background: '#2a323d',
+  // background: '#2a323d',
+  borderLeft: '3px solid #363f49',
   color: '#e0e0e0',
   cursor: 'pointer',
   fontSize: 13,
   fontWeight: 'normal',
-  margin: '5px 10px',
-  padding: '10px 0 10px 10px'
+  margin: '0 10px',
+  padding: '10px 0 10px 15px'
 };
 
 var styleStoryStateSelected = (0, _extends3.default)({}, styleStoryState, {
+  borderLeft: '3px solid #46e48d',
   color: '#46e48d',
-  margin: '5px 0 5px 10px'
+  margin: '0 0 0 10px'
 });
 
 var Stories = function (_React$Component) {
